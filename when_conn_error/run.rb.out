@@ -1,0 +1,15 @@
+github_repo_version_stats.rb:36:in `get_releases_paged':  (RuntimeError)
+Error connecting to url: 'https://api.github.com/repos/crystal-lang/crystal/releases?page=1'; response.code: 403, response.message: Forbidden, response.body:
+{"message":"API rate limit exceeded for 65.35.167.225. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://developer.github.com/v3/#rate-limiting"}
+
+	from github_repo_version_stats.rb:50:in `get_releases'
+	from github_repo_version_stats.rb:16:in `run'
+	from github_repo_version_stats.rb:80:in `<main>'
+url: 'https://api.github.com/repos/crystal-lang/crystal/releases?page=1'
+
+Error connecting to url: 'https://api.github.com/repos/crystal-lang/crystal/releases?page=1'; response.code: 403, response.message: Forbidden, response.body:
+{"message":"API rate limit exceeded for 65.35.167.225. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://developer.github.com/v3/#rate-limiting"}
+
+Command exited with non-zero status 1
+0.10user 0.01system 0:00.37elapsed 32%CPU (0avgtext+0avgdata 16240maxresident)k
+0inputs+8outputs (0major+2562minor)pagefaults 0swaps

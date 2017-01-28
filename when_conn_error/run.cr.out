@@ -1,0 +1,42 @@
+
+
+UNOPTIMIZED MODE:
+
+
+url: 'https://api.github.com/repos/crystal-lang/crystal/releases?page=1'
+
+Error connecting to url: 'https://api.github.com/repos/crystal-lang/crystal/releases?page=1'; response.status_code: 403, response.status_message: Forbidden, response.body:
+{"message":"API rate limit exceeded for 65.35.167.225. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://developer.github.com/v3/#rate-limiting"}
+
+ (Exception)
+0x4d4873: *GithubRepoVersionStats#get_releases_paged<Int32>:String at /home/drhuffman/crystal_version_list.2017-01-28/github_repo_version_stats.cr 28:7
+0x4d409a: *GithubRepoVersionStats#get_releases:Array(JSON::Any) at /home/drhuffman/crystal_version_list.2017-01-28/github_repo_version_stats.cr 42:19
+0x4d3fee: *GithubRepoVersionStats#run:File at /home/drhuffman/crystal_version_list.2017-01-28/github_repo_version_stats.cr 15:20
+0x4557d6: ??? at /home/drhuffman/crystal_version_list.2017-01-28/github_repo_version_stats.cr 72:1
+0x4639f9: main at /home/drhuffman/.cache/crystal/macro82809696.cr 12:15
+0x7f21bd45bf45: __libc_start_main at ??
+0x454ff9: ??? at ??
+0x0: ??? at ??
+Command exited with non-zero status 1
+3.56user 0.36system 0:02.41elapsed 162%CPU (0avgtext+0avgdata 149284maxresident)k
+0inputs+32304outputs (0major+79360minor)pagefaults 0swaps
+
+
+RELEASE MODE:
+
+
+url: 'https://api.github.com/repos/crystal-lang/crystal/releases?page=1'
+
+Error connecting to url: 'https://api.github.com/repos/crystal-lang/crystal/releases?page=1'; response.status_code: 403, response.status_message: Forbidden, response.body:
+{"message":"API rate limit exceeded for 65.35.167.225. (But here's the good news: Authenticated requests get a higher rate limit. Check out the documentation for more details.)","documentation_url":"https://developer.github.com/v3/#rate-limiting"}
+
+ (Exception)
+0x40f02e: ??? at /home/drhuffman/.cache/crystal/macro67534640.cr 10:28
+0x45c867: ??? at /home/drhuffman/crystal_version_list.2017-01-28/github_repo_version_stats.cr 28:7
+0x42f16c: main at /home/drhuffman/crystal_version_list.2017-01-28/github_repo_version_stats.cr 15:20
+0x7f519dd97f45: __libc_start_main at ??
+0x40e819: ??? at ??
+0x0: ??? at ??
+Command exited with non-zero status 1
+0.01user 0.01system 0:00.36elapsed 6%CPU (0avgtext+0avgdata 10052maxresident)k
+0inputs+0outputs (0major+1474minor)pagefaults 0swaps
